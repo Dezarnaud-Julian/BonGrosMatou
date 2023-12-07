@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { FreeCamera, Vector3, HemisphericLight, MeshBuilder, Scene, Mesh, KeyboardEventTypes, SceneLoader } from "@babylonjs/core";
 import SceneComponent from 'babylonjs-hook';
+import HavokPhysics from "@babylonjs/havok";
+import { Inspector } from '@babylonjs/inspector';
 import "./App.css";
 
 function App() {
@@ -8,7 +10,7 @@ function App() {
   let camera: FreeCamera;
 
   const onSceneReady = (scene: Scene) => {
-    camera = new FreeCamera("camera1", new Vector3(0, 5, -10), scene);
+    camera = new FreeCamera("camera1", new Vector3(0, 5, -6), scene);
     camera.setTarget(Vector3.Zero());
     const canvas = scene.getEngine().getRenderingCanvas();
     

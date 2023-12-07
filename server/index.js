@@ -8,6 +8,13 @@ const mainRoutes = require('./src/routes/mainRoutes');
 app.use(express.json());
 
 // Middlewares, configurations, etc.
+// Middleware pour activer CORS
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // ou spécifiez votre domaine au lieu de '*'
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 // Utilisation des routes
 app.use('/', mainRoutes);
