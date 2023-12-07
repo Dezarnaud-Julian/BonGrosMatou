@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Score from './Score';
+import App from './App/App';
+import Score from './Score/Score';
 import Leaderboard from "./leaderboard";
 import reportWebVitals from './reportWebVitals';
 import AppHeader from "./header/header";
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

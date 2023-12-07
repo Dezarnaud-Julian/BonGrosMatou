@@ -5,7 +5,7 @@ import './header.css';
 function AppHeader() {
     return (
         <header className="header">
-            <h1 className="titrePrincipal">React BabylonJS</h1>
+            <h1 className="titrePrincipal">You are a ball of paper, go into the yellow bin</h1>
         </header>
     );
 }

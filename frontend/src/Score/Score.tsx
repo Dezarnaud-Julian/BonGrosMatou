@@ -1,17 +1,17 @@
 import React from 'react';
 import './Score.css'; // You can create a separate CSS file for styling
 
-interface ScoreProps {
+export type ScoreData = {
   name: string;
-  score: number;
-}
+  points: number;
+};
 
-const Score: React.FC<ScoreProps> = ({ name, score }) => {
+const Score: React.FC<ScoreData> = ({ name, points }) => {
   return (
     <div className="score-container">
       <div className="score-rectangle">
         <p className="score-name">{name}</p>
-        <p className="score-value">{score}</p>
+        <p className="score-value">{points}</p>
       </div>
     </div>
   );
