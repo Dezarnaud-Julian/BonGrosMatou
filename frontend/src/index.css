@@ -1,0 +1,37 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 1%;
+  background-color: #f0f0f0; /* Optional background color */
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+  background-color: #f0f0f0; /* Optional background color */
+}
+
+.content {
+  display: flex;
+}
+
+.app-container {
+  width: 80%;
+  margin: auto;
+}
+
+.sidebar {
+  border: 1px solid #ccc;
+  width: 20%;
+}
