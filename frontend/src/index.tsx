@@ -33,6 +33,7 @@ root.render(
               </div>
               <div className="Score">
                   <Leaderboard></Leaderboard>
+                  <Score name={"abc"} points={3}></Score>
               </div>
           </div>
       </div>
