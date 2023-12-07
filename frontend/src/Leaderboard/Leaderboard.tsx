@@ -22,7 +22,13 @@ const LeaderBoard: React.FC = () => {
           points: score.points,
         }));
 
-        setScores(formattedData);
+        // Tri des scores par ordre décroissant
+        const sortedScores = formattedData.sort((a, b) => b.points - a.points);
+
+        // Sélection des 6 premiers scores
+        const top6Scores = sortedScores.slice(0, 6);
+
+        setScores(top6Scores);
       } catch (error) {
         console.log('error', error);
       }

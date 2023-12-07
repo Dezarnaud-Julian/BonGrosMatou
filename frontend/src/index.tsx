@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(
 // Wrapping App with a div as a container
 root.render(
     <div className="container">
-      <h1>React BabylonJS</h1>
+      <h1>You are a ball of paper, go into the yellow bin</h1>
       <div className="content">
         <div className="app-container">
           <App />
