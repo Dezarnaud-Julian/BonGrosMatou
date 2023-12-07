@@ -5,6 +5,8 @@ const { db } = require('./utils/database');
 // Autres imports...
 const mainRoutes = require('./routes/mainRoutes');
 
+app.use(express.json());
+
 // Middlewares, configurations, etc.
 
 // Utilisation des routes

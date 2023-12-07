@@ -1,7 +1,6 @@
 const Scores = require('../models/scoreModel');
 
 exports.postScore = async (req, res) => {
-    console.log(req.body);
   const { name, points } = req.body;
     try {
         const score = await Scores.create({ name, points });
