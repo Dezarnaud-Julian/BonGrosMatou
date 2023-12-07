@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import Score from './Score';
+import Leaderboard from "./leaderboard";
 import reportWebVitals from './reportWebVitals';
+import AppHeader from "./header/header";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,18 +14,29 @@ const root = ReactDOM.createRoot(
 // Wrapping App with a div as a container
 root.render(
   <React.StrictMode>
-    <div className="container">
-      <h1>React BabylonJS</h1>
-      <div className="content">
-        <div className="app-container">
-          <App />
-        </div>
-        <div className="sidebar">
-          <h2>LeaderBoard</h2>
-          <Score name="Player 1" score={100} />
-        </div>
+      <div className="container">
+          <div className="left">
+              <AppHeader></AppHeader>
+              <div className="content">
+                <div className="app-container">
+                  <App />
+                </div>
+              </div>
+          </div>
+          <div className="right">
+              <div className="MenuDeroulant">
+                  <h4>Pseudo : </h4>
+                  <div>
+                      <input type="text" placeholder="Veuillez entrez votre pseudo"/>
+                      <button>Enter</button>
+                  </div>
+
+              </div>
+              <div className="Score">
+                  <Leaderboard></Leaderboard>
+              </div>
+          </div>
       </div>
-    </div>
   </React.StrictMode>
 );
 

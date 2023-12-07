@@ -3,8 +3,9 @@
     justify-content: center;
     align-items: center;
     height: 100px; /* Set your preferred height */
-    margin: 10px; /* Set your preferred margin */
-  }
+    /* Set your preferred margin */
+    margin: 20px 10px 10px;
+}
   
   .score-rectangle {
     width: 100%; /* Set your preferred width */
