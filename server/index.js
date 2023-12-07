@@ -12,6 +12,11 @@ app.use(express.json());
 // Utilisation des routes
 app.use('/', mainRoutes);
 
+// index page
+app.get('/', function(req, res) {
+  res.send('hello world');
+});
+
 // Démarrage du serveur
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
