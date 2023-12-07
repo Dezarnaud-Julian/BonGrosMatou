@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
-const { db } = require('./utils/database');
+const { db } = require('./src/utils/database');
 
 // Autres imports...
-const mainRoutes = require('./routes/mainRoutes');
+const mainRoutes = require('./src/routes/mainRoutes');
 
 app.use(express.json());
 
