@@ -1,11 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const scoreController = require('../controllers/scoreController');
 
-// Autres imports...
-const mainController = require('../controllers/mainController');
-
-// Définition des routes
-router.get('/', mainController.getHomePage);
-
+router.post('/scores', scoreController.postScore);
+router.get('/scores', scoreController.getAllScores);
 
 module.exports = router;

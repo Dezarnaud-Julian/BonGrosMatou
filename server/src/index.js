@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const { db } = require('./utils/database');
 
 // Autres imports...
 const mainRoutes = require('./routes/mainRoutes');

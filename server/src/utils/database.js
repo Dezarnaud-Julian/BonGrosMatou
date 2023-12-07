@@ -1,9 +1,15 @@
-const { MongoClient } = require('mongodb');
-const url = 'mongodb://localhost:27017';
+const mongoose = require('mongoose');
 
-// Fonction utilitaire pour se connecter à la base de données
-async function connectToDatabase() {
-  //...
-}
+const MONGODB_URI = 'mongodb://localhost:27017/bonGrosMatou';
 
-module.exports = { connectToDatabase };
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+exports.db = mongoose.connection;
+
+exports.db.on('error', console.error.bind(console, 'Erreur de connexion à MongoDB :'));
+exports.db.once('open', () => {
+  console.log('Connecté à MongoDB');
+});
