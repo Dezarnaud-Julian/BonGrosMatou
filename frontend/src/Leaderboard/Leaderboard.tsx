@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Score, { ScoreData } from '../Score/Score';
+import './Leaderboard.css'; 
 
 const LeaderBoard: React.FC = () => {
   const [scores, setScores] = useState<ScoreData[]>([]);
@@ -39,7 +40,7 @@ const LeaderBoard: React.FC = () => {
 
   return (
     <div className="leaderboard-container">
-      <h2>Leaderboard</h2>
+      <h2 className="leaderBoard">🏆 LeaderBoard 🏆</h2>
       <div className="leaderboard-list">
         {scores.map((score, index) => (
           <Score key={index} name={score.name} points={score.points} />

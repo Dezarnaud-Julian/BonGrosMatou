@@ -97,7 +97,7 @@ function App() {
   };
 
   const handleKeyDown = (key: string) => {
-    const speed = 0.2;
+    const speed = 0.5;
     switch (key) {
       case "ArrowLeft":
         sphere.position.x -= speed;
@@ -121,7 +121,7 @@ function App() {
   
       // Faire tomber les cubes
       cubes.forEach(cube => {
-        cube.position.y -= 0.05; // Ajuste la vitesse de chute ici
+        cube.position.y -= 0.1; // Ajuste la vitesse de chute ici
   
         // Vérifier la collision avec la sphère
         if (
@@ -143,6 +143,7 @@ function App() {
             console.log("Game Over"); // Ajouter une action de fin de jeu si nécessaire
             console.log("Score: ", score); // Ajouter une action de fin de jeu si nécessaire
             saveScore("BonGrosMatou", score);
+            score = 0;
 
           } else if (
             cube.material instanceof StandardMaterial &&

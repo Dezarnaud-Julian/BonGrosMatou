@@ -28,4 +28,9 @@
     font-size: 24px; /* Set your preferred font size for score */
     font-weight: bold;
   }
+  .leaderBoard {
+    border-radius: 10px;
+    border-bottom: 2px solid black;
+    background-image: url("https://static.vecteezy.com/ti/vecteur-libre/p1/13981948-fond-brillant-argente-de-noel-avec-des-flocons-de-neige-et-des-etoiles-vectoriel.jpg");
+}
   

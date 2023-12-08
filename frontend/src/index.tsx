@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App/App';
 import Score from './Score/Score';
-import Leaderboard from "./leaderboard";
+import Leaderboard from "./Leaderboard/Leaderboard";
 import reportWebVitals from './reportWebVitals';
 import AppHeader from "./header/header";
 const root = ReactDOM.createRoot(
@@ -11,8 +11,8 @@ const root = ReactDOM.createRoot(
 );
 
 // Wrapping App with a div as a container
+
 root.render(
-  <React.StrictMode>
       <div className="container">
           <div className="left">
               <AppHeader></AppHeader>
@@ -31,16 +31,10 @@ root.render(
                   </div>
 
               </div>
-              <div className="Score">
-                  <Leaderboard></Leaderboard>
-                  <Score name={"abc"} points={3}></Score>
+              <div className="sidebar">
+                <Leaderboard />
               </div>
           </div>
       </div>
-  </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
