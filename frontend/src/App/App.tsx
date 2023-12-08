@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FreeCamera, Vector3, HemisphericLight, MeshBuilder, Scene, Mesh, KeyboardEventTypes, SceneLoader, StandardMaterial, Color3 } from "@babylonjs/core";
 import SceneComponent from 'babylonjs-hook';
 import "./App.css";
+import { globalPseudo } from "../index";
 
 const saveScore = (name: string, points: number) => {
   var myHeaders = new Headers();
@@ -142,7 +143,7 @@ function App() {
             cube.position.x = Math.random() * 6 - 3;
             console.log("Game Over"); // Ajouter une action de fin de jeu si nécessaire
             console.log("Score: ", score); // Ajouter une action de fin de jeu si nécessaire
-            saveScore("BonGrosMatou", score);
+            saveScore(globalPseudo, score);
             score = 0;
 
           } else if (

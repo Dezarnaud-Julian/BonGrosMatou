@@ -21,3 +21,14 @@ exports.getAllScores = async (req, res) => {
       res.status(500).send('Erreur serveur');
     }
   };
+
+  
+exports.deleteAllScores = async (req, res) => {
+    try {
+      await Scores.deleteMany();
+      res.status(200).send('Scores supprimés');
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Erreur serveur');
+    }
+};
